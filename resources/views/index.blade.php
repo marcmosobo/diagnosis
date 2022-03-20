@@ -1,4 +1,4 @@
-@section('title','Symptom Checker')
+@section('title','Home')
 @extends('branch')
 
 @section('content')
@@ -7,9 +7,9 @@
         <div class="row no-gutters align-items-center">
             <div class="col-md-6 col-lg-7">
                 <div class="contact-info">
-                    <h3>Get the info you are looking for right now</h3>
-                    <p>If your looking for an author-oriented approach to blogging, you can use our Contact Us page.
-                         It gets the process moving right away</p>
+                    <h3>Get the information you are looking for right now</h3>
+                    <p>If your looking for a professional outlook on your symptoms, you can use our application.
+                         It gets the information and recovery process moving right away</p>
                     <div class="circular-icons social-links">
                         <ul>
                             <li><a href="https://demo.codevibrant.com/html/kavya/contact.html#"><i class="fab fa-facebook-f"></i></a></li>
@@ -34,9 +34,9 @@
                 @endif
                 <form class="contact-form" action="{{route('form.search')}}" method="GET" role="search">
                     {{csrf_field()}}
-                    <h3>Get in touch</h3>
-                    <p>Feel free to drop us a message</p>
-                    <textarea rows="7" class="form-control" placeholder="Type your message here" name="search">
+                    <h3>Feeling a headache or nausea?</h3>
+                    <p>Feel free to help us diagnose your symptoms</p>
+                    <textarea rows="7" class="form-control" placeholder="Type your symptoms here" name="search">
 
                     </textarea>
 

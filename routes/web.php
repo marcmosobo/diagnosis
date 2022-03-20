@@ -16,3 +16,4 @@ use App\Http\Controllers\PagesController;
 
 Route::get('/',[PagesController::class,'index']);
 Route::get('search',[PagesController::class,'searchQ'])->name('form.search');
+Route::get('single_search/{id}',[PagesController::class,'single']);

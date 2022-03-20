@@ -6,13 +6,13 @@
     <section class="search-results">
         <div class="container">
         @if(count($searcheddiagnoses) == 1)
-            <h5 class="search-result-title">We've found {{count($searcheddiagnoses)}} matching blog.</h5>
+            <h5 class="search-result-title">We've found {{count($searcheddiagnoses)}} matching diagnoses.</h5>
             @elseif(count($searcheddiagnoses) < 5)
-            <h5 class="search-result-title">We've found {{count($searcheddiagnoses)}} matching blogs.</h5>
+            <h5 class="search-result-title">We've found {{count($searcheddiagnoses)}} matching diagnoses.</h5>
             @elseif(count($searcheddiagnoses) > 5)
-            <h5 class="search-result-title">Great! We've found {{count($searcheddiagnoses)}} matching blogs.</h5>
+            <h5 class="search-result-title">Great! We've found {{count($searcheddiagnoses)}} matching diagnoses.</h5>
             @else
-            <h5 class="search-result-title">Oops! We've found no matching blogs.</h5>
+            <h5 class="search-result-title">Oops! We've found no matching diagnosis.</h5>
         @endif
             <div class="row align-items-center">
                 @foreach($searcheddiagnoses as $diagnosis)
@@ -23,7 +23,7 @@
                                 <div class="card-body">
                                     <ul class="category-tag-list">
                                         <li class="category-tag-name">
-                                            <a href="#">{{$diagnosis->disease}}</a>
+                                            <a href="{{url('single_search/'.$diagnosis->id)}}">{{$diagnosis->disease}}</a>
                                         </li>
 
                                     </ul>

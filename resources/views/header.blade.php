@@ -18,7 +18,7 @@
             <div class="brand-name text-center">
               <a href="/">
                 <h1>{{config('app.name')}}</h1>
-                <span>On Top of the World</span>
+                <span>Know your State Now</span>
               </a>
             </div>
           </div>

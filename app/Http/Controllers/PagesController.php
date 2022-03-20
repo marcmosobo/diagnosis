@@ -26,4 +26,9 @@ class PagesController extends Controller
         return view('search',compact('searcheddiagnoses'))
         ->with('i',(request()->input('page',1)- 1)* 5);
     }
+
+    public function single($id){
+        $diagnosis = Diagnosis::findOrFail($id);
+        return view('single_search')->withDiagnosis($diagnosis);
+    }
 }
